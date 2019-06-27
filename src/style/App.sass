@@ -1,0 +1,174 @@
+$size: 4.5vw
+
+=arrow($angle)
+  border: solid white
+  border-width: 0 0.8vh 0.8vh 0
+  width: 4vh
+  height: 4vh
+  position: absolute
+  transform: $angle
+  top: 50vh
+  opacity: 0.7
+
+=arrowLeft
+  +arrow(rotate(135deg))
+  left: $size
+
+=arrowRight
+  +arrow(rotate(-45deg))
+  right: $size
+
+=box
+  height: 100%
+  width: 100%
+  position: absolute
+  text-align: center
+  font-family: 'Arial', sans-serif
+
+=weatherDetails($fontSize, $top, $left)
+  font-size: $fontSize
+  color: white
+  position: absolute
+  top: $top
+  left: $left
+
+.arrowRight-tomorrow
+  +arrowRight
+
+.arrowRight-later, .arrowRight-now
+  +arrowRight
+
+.arrowLeft-later
+  +arrowLeft
+
+.arrowLeft-tomorrow, .arrowLeft-now
+  +arrowLeft
+
+body
+  background: #3a3a3a
+  overflow: hidden
+  opacity: 0
+  transition: opacity 10s
+
+.App
+  margin: 0
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: #3a3a3a
+  transform: scale(1.01)
+
+.Slider
+  height: 100%
+  width: 100%
+  position: inherit
+
+.WeatherNow
+  +box
+  &:target
+    animation: slideInAlt 1s forwards
+
+.WeatherTomorrow, .WeatherLater
+  +box
+  left: 100vw
+  &:target
+    animation: slideIn 1s forwards
+
+.WeatherNowBg, .WeatherTomorrowBg, .WeatherLaterBg
+  +box
+
+.Weather
+  position: absolute
+  animation: fadeIn 6s
+
+.Temp
+  +weatherDetails(30vh, 50vh, 15vw)
+
+.TempApparent
+  +weatherDetails(5vh, 79.5vh, 15vw)
+  font-weight: normal
+  white-space: nowrap
+
+p
+  position: absolute
+  font-size: 10vh
+  bottom: 17vh
+  left: 21vw
+  font-weight: 600
+
+h3
+  font-size: 4vh
+
+h4
+  font-size: 3vh
+
+.SunriseTime
+  +weatherDetails(5vh, 58vh, 45vw)
+
+.Humidity
+  +weatherDetails(5vh, 58vh, 53.5vw)
+
+.WindSpeed
+  +weatherDetails(5vh, 58vh, 58vw)
+
+.MoonPhase
+  +weatherDetails(6.5vh, 58vh, 68vw)
+
+.SunsetTime
+  +weatherDetails(6vh, 58vh, 74vw)
+
+.Summary
+  +weatherDetails(6vh, 72.5vh, 37vw)
+  white-space: nowrap
+
+.Date
+  +weatherDetails(4.5vh, 51vh, 27vw)
+  font-weight: normal
+  white-space: nowrap
+
+@keyframes slideIn
+  0%
+    left: 95vw
+  100%
+    left: 0
+
+@keyframes slideInAlt
+  0%
+    left: -100vw
+  100%
+    left: 0
+
+@keyframes slideOut
+  0%
+    right: 0
+  100%
+    right: 100vw
+
+@keyframes slideOutAlt
+  0%
+    left: 0
+  100%
+    left: -100vw
+
+@keyframes slideOutRight
+  0%
+    left: 0
+  100%
+    left: 100vw
+
+@keyframes slideOutRightAlt
+  0%
+    left: 0
+  100%
+    left: 100vw
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 100

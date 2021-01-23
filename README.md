@@ -22,4 +22,4 @@ Created with:
 - [ ] Code refactoring
 </br></br>
 
-![Ombrello](https://im5.ezgif.com/tmp/ezgif-5-22fef94deb6a.gif)
+![Ombrello](https://web.telegram.org/caab3f14-848f-4f3a-9594-e846f846fa72)

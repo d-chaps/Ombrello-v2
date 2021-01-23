@@ -22,4 +22,4 @@ Created with:
 - [ ] Code refactoring
 </br></br>
 
-![Ombrello](https://ibb.co/2qqVFhW)
+![Ombrello](https://i.ibb.co/xhh92LX/caab3f14-848f-4f3a-9594-e846f846fa72.jpg)

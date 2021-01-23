@@ -55,7 +55,7 @@ class Carousel extends Component {
         let animation = document.getElementsByClassName(slide);
 
         if(slide === "WeatherNow") {
-            animation[0].style.animation = "slideOut 1s forwards";
+            animation[0].style.animation = "";
 
             setTimeout(() => {
                 animation[0].style.animation = "";
@@ -87,7 +87,7 @@ class Carousel extends Component {
                                     }
                                 </h1>
                             </div>
-                        <a href="#weatherTomorrow">
+                         <a href="#weatherTomorrow">
                             <div className="arrowRight-tomorrow" onClick={() => {this.slideRight("WeatherNow")}}></div>
                         </a>
                     </div>
@@ -117,7 +117,7 @@ class Carousel extends Component {
                     <div className="WeatherLater" id="weatherLater">
                         <div className="WeatherLaterBg">
                         </div>
-                        <a href="#weathertomorrow">
+                        <a href="#weatherTomorrow">
                             <div className="arrowLeft-tomorrow" onClick={() => {this.slideLeft("WeatherLater", "WeatherTomorrow")}}></div>
                         </a>
                         <h1>

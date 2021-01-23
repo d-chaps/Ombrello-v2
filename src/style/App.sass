@@ -73,9 +73,15 @@ body
   &:target
     animation: slideInAlt 1s forwards
 
-.WeatherTomorrow, .WeatherLater
+.WeatherTomorrow
   +box
-  left: 100vw
+  right: 100vw
+  &:target
+    animation: slideIn 1s forwards
+
+.WeatherLater
+  +box
+  right: 200vw
   &:target
     animation: slideIn 1s forwards
 
@@ -90,7 +96,7 @@ body
   +weatherDetails(30vh, 50vh, 15vw)
 
 .TempApparent
-  +weatherDetails(5vh, 79.5vh, 15vw)
+  +weatherDetails(5vh, 79.5vh, 14vw)
   font-weight: normal
   white-space: nowrap
 
@@ -98,7 +104,7 @@ p
   position: absolute
   font-size: 10vh
   bottom: 17vh
-  left: 21vw
+  left: 8vw
   font-weight: 600
 
 h3
@@ -108,26 +114,26 @@ h4
   font-size: 3vh
 
 .SunriseTime
-  +weatherDetails(5vh, 58vh, 45vw)
+  +weatherDetails(5vh, 58vh, 40vw)
 
 .Humidity
-  +weatherDetails(5vh, 58vh, 53.5vw)
+  +weatherDetails(5vh, 58vh, 48vw)
 
 .WindSpeed
-  +weatherDetails(5vh, 58vh, 58vw)
+  +weatherDetails(5vh, 58vh, 53vw)
 
 .MoonPhase
-  +weatherDetails(6.5vh, 58vh, 68vw)
+  +weatherDetails(6.5vh, 58vh, 62vw)
 
 .SunsetTime
-  +weatherDetails(6vh, 58vh, 74vw)
+  +weatherDetails(6vh, 58vh, 69vw)
 
 .Summary
-  +weatherDetails(6vh, 72.5vh, 37vw)
+  +weatherDetails(6vh, 72.5vh, 40vw)
   white-space: nowrap
 
 .Date
-  +weatherDetails(4.5vh, 51vh, 27vw)
+  +weatherDetails(4.5vh, 50vh, 15vw)
   font-weight: normal
   white-space: nowrap
 
@@ -142,12 +148,6 @@ h4
     left: -100vw
   100%
     left: 0
-
-@keyframes slideOut
-  0%
-    right: 0
-  100%
-    right: 100vw
 
 @keyframes slideOutAlt
   0%
